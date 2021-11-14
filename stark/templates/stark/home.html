@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Interative Exchange Rate</h2>
+<br>
+
+<!--form action="/your-name/" method="post">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
+</form-->
+
+<!--<form method="get" enctype="multipart/form-data" action="/home/">-->
+<!--{% csrf_token %}-->
+<!--   <input type="text" name="u_name">-->
+<!--   <input type="text" name="age">-->
+<!--    <input type="text" name="address">-->
+<!--    <input type="submit" value="ok">-->
+<!--</form>-->
+<h1>Home</h1>
+<form method="post">
+    {% csrf_token%}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<h2>{{ text }}</h2>
+</body>
+</html>
+
