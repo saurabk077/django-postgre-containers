@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from stark.views import get_exchange_rate, HomeView
+from stark.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', HomeView.as_view(), name='home'),
-    path('get_stock_data/', get_exchange_rate),
+    path('', HomeView.as_view(), name='home'),
 ]
